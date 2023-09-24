@@ -1,0 +1,89 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand img {
+    max-width: 100px; /* Adjust the logo size as needed */
+    height: auto;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f8f9fa;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Featured Products Styles */
+.featured-products {
+    padding: 60px 0;
+}
+
+.card {
+    border: none;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .navbar-brand img {
+        max-width: 80px; /* Adjust the logo size for small screens */
+    }
+}
