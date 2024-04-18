@@ -1,0 +1,16 @@
+def isLucky(n):
+
+    while n > 0:
+        rem = n % 10
+        if rem != 4 or rem != 7:
+            return False
+    
+
+def generateLucky(n):
+
+    lst = [False] * (n + 1)
+
+    m = 4
+
+    while (m < n + 1):
+        if isLucky(m):
