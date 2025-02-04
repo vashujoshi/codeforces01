@@ -1,0 +1,86 @@
+#include <iostream>
+using namespace std;
+
+class Node
+{
+public:
+    int data;
+    Node *next;
+
+    Node(int data)
+    {
+        this->data = data;
+        this->next = NULL;
+    }
+    // insertion at head
+    void insertathead(Node *&head, int d)
+    {
+        Node *temp = new Node(d);
+        temp->next = head;
+        head = temp;
+    }
+    void insertattail(Node *&tail, int d)
+    {
+        Node *temp = new Node(d);
+        tail->next = temp;
+        tail = temp;
+    }
+
+    // print
+    void print(Node *&head)
+    {
+
+        Node *temp = head;
+        while (temp != NULL)
+        {
+            cout << temp->data << " ";
+            temp = temp->next;
+        }
+        cout << endl;
+    }
+
+    void insertatposition(Node *&head,  int position, int d)
+    {
+        if (position == 1)
+        {
+            insertathead(head, d);
+            return;
+        }
+
+        Node *temp = head;
+        Node *tail = head;
+        int cnt = 1;
+        while (cnt <= position-1)
+        {
+            temp = temp->next;
+            cnt++;
+        }
+
+        Node *nodetoinsert = new Node(d);
+        nodetoinsert->next = temp->next;
+        temp->next = nodetoinsert;
+
+        if (temp->next == NULL)
+        {
+            insertattail(tail, d);
+            return;
+        }
+    }
+};
+int main()
+{
+    // new node
+    Node *n1 = new Node(1);
+    Node *head = n1;
+    Node *tail = n1;
+
+    n1->print(head);
+    n1->insertathead(head, 0);
+    
+    n1->print(head);
+    n1->insertattail(tail, 3);
+    n1->insertatposition(head,2,2); // for insertion
+    n1->insertattail(tail, 4);
+    n1->insertattail(tail, 5);
+    n1->print(head);
+}

@@ -1,0 +1,1 @@
+node *nodetoinsert = new node(d);

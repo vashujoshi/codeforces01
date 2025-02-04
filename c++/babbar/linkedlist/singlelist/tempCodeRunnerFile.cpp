@@ -1,0 +1,1 @@
+n1->insertathead(head, 15);
